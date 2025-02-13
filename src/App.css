@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(to right, #000428, #004e92);
+  color: #f2aa4c;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+#drum-machine {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 600px;
+  margin: auto;
+}
+
+#drum-machine:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 1);
+}
+
+.whole-drum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: auto;
+}
+
+.drum-pad {
+  background: linear-gradient(to bottom right, #28313b, #485461);
+  border: none;
+  border-radius: 10px;
+  color: #f2aa4c;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.drum-pad:hover {
+  background: linear-gradient(to bottom right, #1c1c1c, #3a3a3a);
+  color: #f2aa4c;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+#display {
+  margin-top: 20px;
+  font-size: 1.2em;
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.2px;
+  color: #f2aa4c;
+  max-width: 500px;
+  margin: auto;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .whole-drum {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .drum-pad {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  #display {
+    font-size: 1em;
+  }
+}
